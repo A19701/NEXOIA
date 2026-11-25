@@ -1,0 +1,190 @@
+html, body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.app {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.principal {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 0;
+}
+
+.principal header {
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 24px;
+}
+
+.premium-controles {
+    flex-wrap: wrap;
+    min-width: 0;
+    gap: 10px;
+}
+
+.categoria::before {
+    display: none !important;
+    content: none !important;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 16px;
+    min-height: 105px;
+    text-align: left;
+}
+
+.categoria-icono {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+}
+
+.categoria-icono svg {
+    width: 23px;
+    height: 23px;
+}
+
+.categoria strong {
+    font-size: 14px;
+}
+
+.categoria small {
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.bienvenida {
+    padding: 10px 0;
+}
+
+.robot-bienvenida {
+    width: 95px;
+    height: 95px;
+}
+
+.categorias {
+    margin: 20px auto;
+}
+
+.buscar-chats svg {
+    width: 18px;
+    height: 18px;
+    color: #94a3b8;
+    display: block;
+}
+
+#btnMic, #btnAdjuntar, #enviar, #vozDirecta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 44px;
+    min-width: 44px;
+    padding: 10px;
+    border-radius: 13px;
+}
+
+#btnMic, #btnAdjuntar {
+    color: #b5b7d8;
+    background: transparent;
+}
+
+#btnMic:hover, #btnAdjuntar:hover {
+    background: #292e48;
+    color: white;
+}
+
+#enviar {
+    width: 44px;
+    border-radius: 50%;
+    color: white;
+}
+
+#vozDirecta {
+    gap: 9px;
+    background: #292348;
+    border: 1px solid #4a3d83;
+    color: #c4b5fd;
+    font-size: 13px;
+    border-radius: 24px;
+    padding: 10px 15px;
+}
+
+#vozDirecta:hover {
+    background: #45346f;
+}
+
+#btnMic svg,
+#btnAdjuntar svg,
+#enviar svg,
+#vozDirecta svg,
+.controles-voz svg,
+#cerrarVoz svg {
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+#microfonoVoz svg {
+    width: 34px;
+    height: 34px;
+}
+
+form#formulario {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+form#formulario textarea {
+    min-width: 120px;
+}
+
+.chat {
+    min-height: 0;
+}
+
+@media(min-width:701px) {
+    .sidebar {
+        flex-shrink: 0;
+    }
+}
+
+@media(max-width:700px) {
+    .principal header {
+        padding: 12px;
+    }
+
+    form#formulario textarea {
+        flex-basis: 100%;
+    }
+
+    #vozDirecta {
+        margin-left: auto;
+    }
+
+    .categorias {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(max-width:380px) {
+    #vozDirecta span {
+        display: none;
+    }
+}
